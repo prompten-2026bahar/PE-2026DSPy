@@ -1,0 +1,14 @@
+# DSPy'de Programlama
+
+DSPy, *metin dizileri yerine kod yazmaya* dayalı bir yaklaşımdır. Diğer bir deyişle, doğru kontrol akışını oluşturmak kritik öneme sahiptir. İşlemi **görevinizi tanımlayarak** başlatın. Sisteminizin girdileri nelerdir ve sisteminiz çıktı olarak ne üretmelidir? Verileriniz üzerinde çalışan bir sohbet botu mu yoksa bir kod asistanı mı? Ya da belki çeviri yapan, arama sonuçlarından bölümleri öne çıkaran veya kaynakçalı raporlar oluşturan bir sistem mi?
+
+Ardından, **başlangıç boru hattınızı (pipeline) tanımlayın**. DSPy programınız tek bir modülden mi oluşmalı, yoksa onu birkaç adıma mı bölmeniz gerekiyor? Bilgi geri getirme (retrieval) mekanizmasına veya hesap makinesi ya da takvim API'si gibi diğer araçlara ihtiyacınız var mı? Sorununuzu iyi kapsamlandırılmış birden fazla adımda çözmek için tipik bir iş akışı mı mevcut, yoksa göreviniz için ajanlarla daha ucu açık bir araç kullanımı mı istiyorsunuz? Bunlar üzerine düşünün ancak basit başlayın; belki sadece tek bir `dspy.ChainOfThought` modülü ile yola çıkıp, gözlemlerinize dayanarak karmaşıklığı kademeli olarak artırın.
+
+Bunu yaparken, programınızın girdileri için **birkaç örnek hazırlayın ve deneyin**. Nelerin mümkün olduğunu anlamak için bu noktada güçlü bir LM veya birkaç farklı LM kullanmayı düşünün. Denediğiniz ilginç (hem kolay hem de zor) örnekleri kaydedin. Bu örnekler, daha sonra değerlendirme ve optimizasyon yaparken oldukça faydalı olacaktır.
+
+
+??? "İyi tasarım kalıplarını teşvik etmenin ötesinde, DSPy burada nasıl yardımcı olur?"
+
+    Geleneksel istemler (prompts), temel sistem mimarinizi; yeni LM'lere, hedeflere veya boru hatlarına taşınamaz olan tesadüfi seçimlerle birleştirir. Geleneksel bir istem; LM'den belirli girdileri almasını ve belirli türlerde çıktılar üretmesini ister (bir _imza_), girdileri belirli şekillerde biçimlendirir ve çıktıları doğru şekilde ayrıştırabileceği bir formda talep eder (bir _adaptör_), LM'den "adım adım düşünme" veya araç kullanma gibi belirli stratejileri uygulamasını ister (bir _modül_ mantığı) ve her bir LM'ye bunu yaptırmanın doğru yolunu keşfetmek için büyük ölçüde deneme yanılmaya dayanır (bir tür manuel _optizimasyon_).
+    
+    DSPy bu endişeleri birbirinden ayırır ve siz onları dikkate almanız gerekene kadar alt düzey olanları otomatikleştirir. Bu, çok daha yüksek taşınabilirlik ile çok daha kısa kod yazmanıza olanak tanır. Örneğin, DSPy modüllerini kullanarak bir program yazarsanız, mantığınızın geri kalanını değiştirmeden LM'yi veya adaptörünü değiştirebilirsiniz. Veya imzalarınızı değiştirmeden `dspy.ChainOfThought` gibi bir _modülü_, `dspy.ProgramOfThought` gibi başka bir modülle değiştirebilirsiniz. Optimize edicileri kullanmaya hazır olduğunuzda, aynı programın istemleri optimize edilebilir veya LM ağırlıklarına ince ayar (fine-tuning) yapılabilir.
