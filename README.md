@@ -4,7 +4,7 @@
 | İsim Soyisim | Öğrenci Numarası |
 | :--- | :--- |
 | Melike Nur Köseoğlu | 20259258003 |
-| Onur Serkan Kaya |  |
+| Onur Serkan Kaya | 20259258006 |
 | Burak Arslan |  |
 
 ---
