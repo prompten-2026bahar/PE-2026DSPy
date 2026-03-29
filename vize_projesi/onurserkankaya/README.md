@@ -1,3 +1,4 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Y_zesxa5UmRrmgx1ZvcmnQvawF2EDxyx?usp=sharing)
 # 🛡️ DSPy Guard: Yapay Zeka Destekli Otonom Siber Tehdit Analizi
 
 DSPy Guard, şüpheli e-postaları (phishing/oltalama) siber güvenlik perspektifinden inceleyen, risk analizi yapan ve profesyonel raporlar sunan **DSPy Framework** tabanlı bir otonom analiz boru hattıdır.
