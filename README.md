@@ -5,7 +5,7 @@
 | :--- | :--- |
 | Melike Nur Köseoğlu | 20259258003 |
 | Onur Serkan Kaya | 20259258006 |
-| Burak Arslan |  |
+| Burak Arslan | 20259258002 | 
 
 ---
 
